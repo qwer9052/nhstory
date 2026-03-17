@@ -26,3 +26,22 @@ build
 *.njsproj
 *.sln
 *.sw?
+
+# Database
+data/*.db
+data/*.db-shm
+data/*.db-wal
+data/*.db-journal
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python scripts (임시 파일)
+*.py
+migrate*.py
+mkfiles*.py
+make*.py
+overwrite*.py
+fix_*.py
