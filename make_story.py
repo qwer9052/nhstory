@@ -1,0 +1,1 @@
+content = open(" template.txt\).read()
