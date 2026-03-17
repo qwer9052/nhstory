@@ -1,11 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="theme-color" content="#F0EAD6" />
 		%sveltekit.head%
+		<style>
+			*, *::before, *::after { box-sizing: border-box; }
+			html, body {
+				margin: 0;
+				padding: 0;
+				min-width: 320px;
+				background: #F0EAD6;
+				font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+				-webkit-text-size-adjust: 100%;
+			}
+			/* 모바일 최적화 - 최대 너비 중앙 정렬 */
+			#app-root {
+				max-width: 480px;
+				margin: 0 auto;
+				min-height: 100vh;
+				position: relative;
+			}
+			/* 스크롤바 숨기기 (모바일 느낌) */
+			::-webkit-scrollbar { width: 0; background: transparent; }
+			/* 탭 하이라이트 제거 */
+			* { -webkit-tap-highlight-color: transparent; }
+			/* 이미지 드래그 방지 */
+			img { -webkit-user-drag: none; user-select: none; }
+			/* 버튼 기본 스타일 초기화 */
+			button { font-family: inherit; }
+		</style>
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+		<div id="app-root">%sveltekit.body%</div>
 	</body>
 </html>

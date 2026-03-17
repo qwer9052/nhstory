@@ -1,40 +1,18 @@
 ﻿<script lang="ts">
   import type { LayoutData } from './$types';
-  
   export let data: LayoutData;
 </script>
 
-<nav>
-  {#if data.session}
-    <span>Welcome, {data.session.user?.name}!</span>
-    <form method="POST" action="/auth/signout">
-      <button type="submit">Logout</button>
-    </form>
-  {/if}
-</nav>
-
-<main>
-  <slot />
-</main>
+<slot />
 
 <style>
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background: #333;
-    color: white;
+  :global(*, *::before, *::after) { box-sizing: border-box; margin: 0; padding: 0; }
+  :global(html, body) {
+    background: #F0EAD6;
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+    min-width: 320px;
+    overflow-x: hidden;
   }
-  nav button {
-    background: #dc3545;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  main {
-    padding: 2rem;
-  }
+  :global(a) { color: inherit; }
+  :global(input, textarea, select, button) { font-family: inherit; }
 </style>
