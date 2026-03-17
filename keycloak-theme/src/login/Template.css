@@ -1,0 +1,390 @@
+/* Bamkabu Theme Styles - 밤카부 */
+
+.bamkabu-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bamkabu-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: #F5E6C8;
+}
+
+.bamkabu-background {
+    display: none;
+}
+
+.bamkabu-card {
+    background: #F5E6C8;
+    padding: 30px 40px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.bamkabu-logo {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.bamkabu-logo img {
+    width: 180px;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+}
+
+.bamkabu-header-text {
+    color: #5D4E37;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.bamkabu-content {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(93,78,55,0.10);
+}
+
+.bamkabu-content h2 {
+    color: #3D3D3D;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+/* Form Labels */
+.bamkabu-content label,
+.pf-c-form__label-text {
+    color: #3D3D3D;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+/* Input Fields */
+.bamkabu-content input[type="text"],
+.bamkabu-content input[type="password"],
+.bamkabu-content input[type="email"],
+.pf-c-form-control {
+    width: 100%;
+    padding: 10px 13px;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    background: #FAFAFA;
+    transition: border-color 0.2s ease;
+}
+
+.bamkabu-content input:focus,
+.pf-c-form-control:focus {
+    outline: none;
+    border-color: #C4A574;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(196,165,116,0.15);
+}
+
+/* Submit Button */
+.bamkabu-content button[type="submit"],
+.bamkabu-content input[type="submit"],
+.pf-c-button.pf-m-primary {
+    width: 100%;
+    padding: 12px;
+    background: #C4A574 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 8px;
+    box-shadow: 0 2px 6px rgba(196,165,116,0.3);
+}
+
+.bamkabu-content button[type="submit"]:hover,
+.bamkabu-content input[type="submit"]:hover,
+.pf-c-button.pf-m-primary:hover {
+    background: #B39560 !important;
+    box-shadow: 0 4px 10px rgba(196,165,116,0.4);
+}
+
+/* Alert Messages */
+.bamkabu-alert {
+    padding: 12px 15px;
+    border-radius: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.bamkabu-alert-error {
+    background-color: #FFE4E4;
+    color: #D32F2F;
+    border: 1px solid #FFCDD2;
+}
+
+.bamkabu-alert-warning {
+    background-color: #FFF8E1;
+    color: #F57C00;
+    border: 1px solid #FFE082;
+}
+
+.bamkabu-alert-success {
+    background-color: #E8F5E9;
+    color: #388E3C;
+    border: 1px solid #A5D6A7;
+}
+
+.bamkabu-alert-info {
+    background-color: #E3F2FD;
+    color: #1976D2;
+    border: 1px solid #90CAF9;
+}
+
+/* Footer Text */
+.bamkabu-footer {
+    text-align: center;
+    font-size: 13px;
+    color: #5D4E37;
+    line-height: 1.8;
+}
+
+.bamkabu-footer strong {
+    color: #C4A574;
+}
+
+/* Social Providers - Keycloak 구조: #kc-social-providers > hr + h2 + ul > li > a */
+.bamkabu-social {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1.5px solid #E8D9C0;
+}
+
+/* Keycloak이 렌더링하는 hr, h2 숨기고 우리 스타일로 */
+.bamkabu-social hr,
+#kc-social-providers hr {
+    display: none;
+}
+
+#kc-social-providers h2 {
+    display: none;
+}
+
+#kc-social-providers ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#kc-social-providers li {
+    margin-bottom: 10px;
+}
+
+#kc-social-providers a,
+.bamkabu-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    padding: 11px 16px;
+    background: #ffffff;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #3D3D3D;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#kc-social-providers a:hover,
+.bamkabu-social a:hover {
+    background: #fafafa;
+    border-color: #C4A574;
+    box-shadow: 0 2px 6px rgba(196,165,116,0.18);
+    text-decoration: none;
+}
+
+/* Keycloak iconClasses - 아이콘 숨김 */
+#kc-social-providers a i,
+.bamkabu-social a i {
+    display: none;
+}
+
+#kc-social-providers a span,
+.bamkabu-social a span,
+.kc-social-provider-name {
+    padding-left: 20px;
+    flex: unset !important;
+    width: auto !important;
+    margin: 0 !important;
+}
+
+/* Hide Hearts */
+.bamkabu-hearts {
+    display: none;
+}
+
+/* Override Keycloak Defaults */
+#kc-header-wrapper {
+    display: none;
+}
+
+#kc-form-login {
+    margin: 0;
+}
+
+#kc-form-options {
+    margin-top: 15px;
+    display: none;
+}
+
+.pf-c-form__group {
+    margin-bottom: 0;
+}
+
+a {
+    color: #C4A574;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #B39560;
+}
+
+/* Social Provider List */
+#kc-social-providers ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#kc-social-providers li {
+    margin-bottom: 10px;
+}
+
+/* Input wrapper fix */
+.pf-c-input-group {
+    display: flex;
+}
+
+.pf-c-input-group .pf-c-form-control {
+    flex: 1;
+    border-radius: 6px 0 0 6px;
+    margin-bottom: 20px;
+}
+
+.pf-c-input-group .pf-c-button {
+    border-radius: 0 6px 6px 0;
+}
+
+/* Hide default login card styling */
+.login-pf-page .card-pf {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Password visibility toggle - 숨김 */
+.pf-c-button.pf-m-control {
+    display: none;
+}
+
+/* 소셜 버튼은 pf-m-control 클래스가 붙어도 숨기지 않음 */
+#kc-social-providers a.pf-m-control,
+.kc-social-links a.pf-m-control {
+    display: flex !important;
+}
+
+/* 토글 버튼 없을 때 input border-radius 오른쪽도 적용 */
+.pf-c-input-group .pf-c-form-control {
+    border-radius: 6px !important;
+}
+
+/* ===== 모바일 반응형 ===== */
+@media (max-width: 480px) {
+    .bamkabu-card {
+        padding: 20px 16px;
+        width: 100%;
+    }
+
+    .bamkabu-logo img {
+        width: 130px;
+    }
+
+    .bamkabu-header-text {
+        font-size: 15px;
+        margin-bottom: 16px;
+    }
+
+    .bamkabu-content {
+        padding: 20px 16px;
+        border-radius: 10px;
+    }
+
+    .bamkabu-content h2 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .bamkabu-content label,
+    .pf-c-form__label-text {
+        font-size: 13px;
+    }
+
+    .bamkabu-content input[type="text"],
+    .bamkabu-content input[type="password"],
+    .bamkabu-content input[type="email"],
+    .pf-c-form-control {
+        font-size: 14px;
+        padding: 10px 12px;
+        margin-bottom: 12px;
+    }
+
+    .bamkabu-content button[type="submit"],
+    .bamkabu-content input[type="submit"],
+    .pf-c-button.pf-m-primary {
+        font-size: 15px;
+        padding: 11px;
+    }
+
+    #kc-social-providers a,
+    .bamkabu-social a {
+        font-size: 13px;
+        padding: 10px 12px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .bamkabu-footer {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    .bamkabu-card {
+        padding: 16px 10px;
+    }
+
+    .bamkabu-content {
+        padding: 16px 12px;
+    }
+}

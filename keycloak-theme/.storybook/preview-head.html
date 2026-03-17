@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+    body.sb-show-main.sb-main-padded {
+        padding: 0;
+    }
+
+    /* Following styles are just meant to avoid white flash when switching from one story to another */
+    @keyframes fadeToTransparent {
+        from {
+            background-color: #393939;
+        }
+
+        to {
+            background-color: transparent;
+        }
+    }
+    html {
+        animation: fadeToTransparent 500ms forwards ease-in;
+    }
+    body > .sb-preparing-docs {
+        visibility: hidden;
+    }
+    body > .sb-preparing-story {
+        visibility: hidden;
+    }
+</style>
